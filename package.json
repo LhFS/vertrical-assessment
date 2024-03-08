@@ -1,0 +1,33 @@
+{
+  "name": "vertrical-assessment",
+  "version": "1.0.0",
+  "description": "Description here",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LhFS/vertrical-assessment.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LhFS/vertrical-assessment/issues"
+  },
+  "homepage": "https://github.com/LhFS/vertrical-assessment#readme",
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.2",
+    "typescript": "^5.4.2"
+  },
+  "devDependencies": {
+    "cypress": "^13.6.6",
+    "ts-loader": "^9.5.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": [
+      "cypress/e2e/common/**/*.{js,ts}",
+      "cypress/e2e/common/.{js,ts}"
+    ]
+  }
+}

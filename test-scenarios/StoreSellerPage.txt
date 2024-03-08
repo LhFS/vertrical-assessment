@@ -1,0 +1,35 @@
+Seller dashboard test scenarios: 
+
+1 - User should be able to add a new product to his account
+
+Given I have accessed my account and gets redirected to the dashboard
+When I click on new product button on the top right corner
+And I fill all required fields
+And Press Add button
+Then a toast message of success with the message: Your new product has been saved! should be displayed
+
+2 - User can't add a product if miss any required field
+
+Given I have accessed my account and gets redirected to the dashboard
+When I click on new product button on the top right corner
+And and I missed one required field
+Then the Add button should be disabled
+When the user tries to tap on Add button
+Then a toast message with the message: <Required field> is missing! should be displayed
+
+3 - User should be able to reply messages directly on the dashboard
+
+Given I have accessed my account and gets redirected to the dashboard
+And I have a new message
+When I click on the button reply
+Then a popout is displayed with the entire message and a field to reply it
+When I type the answer and tap on Send button
+Then a toast is displayed with the message: Your message was sent.
+
+4 - User should be able to filter the statistic by diferent periods
+
+Given I have accessed my account and gets redirected to the dashboard
+When on the Statistic I tap on "This Month" filter dropdown
+Then a dropdown is opened with a list of options
+When I click on "Last Year" option
+Then then the statistic graph should be updated with the last year sales
